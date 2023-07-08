@@ -1,0 +1,93 @@
+.header {
+    height: 74px;
+    width: 100%;
+    @include primary-gradient;
+
+    &__c {
+        display: flex;
+        align-items: center;
+        padding: 10px 24px;
+
+        &-logo {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+        }
+
+        & nav {
+            margin-left: auto;
+            margin-right: auto;
+
+            & ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                & li {
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    margin: 0 6px;
+                    padding: 8px 14px;
+                    border-radius: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    & span{
+                        line-height: 1;
+                        margin-left: 8px;
+                    }
+
+                    &:hover{
+                        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+                    }
+                }
+
+            }
+        }
+
+        & .auth {
+
+            & ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                & li {
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    margin: 0 1px;
+                    padding: 8px 14px;
+                    // border-radius: 0 10px 0 10px;
+                    cursor: pointer;
+
+                    &:first-child{
+                        border-radius: 10px 0 0 10px;
+                    }
+
+                    &:nth-child(2){
+                        border-radius: 0 10px 10px 0;
+                    }
+
+                    & span{
+                        line-height: 1;
+                        margin-left: 8px;
+                    }
+
+                    &:hover{
+                        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+                    }
+                    
+                }
+
+                
+            }
+            &__profile{
+                &-img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
