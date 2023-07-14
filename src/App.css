@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 .header {
   height: 74px;
   width: 100vw;
@@ -62,68 +65,64 @@
       width: 50px; }
 
 .footer {
-  width: 100vw;
-  height: 500px;
-  background-image: linear-gradient(to left, #e6e9f0, #eef1f5);
   display: flex;
-  justify-content: space-evenly; }
-  .footer_main_copyright {
-    height: 100%;
-    width: 240px;
+  flex-direction: column;
+  background-color: #E6E9F0; }
+  .footer__cols {
+    display: flex;
+    min-height: 320px; }
+  .footer__col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .footer_main_copyright-logo {
-      width: 50px;
-      height: 100px;
-      object-fit: contain; }
-  .footer_main_second {
-    height: 100%;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly; }
-    .footer_main_second-follow {
-      font-size: 2rem;
-      color: #0a11cb;
-      text-decoration: underline; }
-    .footer_main_second-logos {
-      margin-top: 0px;
+    width: calc(100vw / 4);
+    padding: 20px 30px; }
+    .footer__col:first-child {
       display: flex;
-      width: 50%;
-      justify-content: space-evenly; }
-      .footer_main_second-logos-icon {
-        width: 40px;
-        height: 40px;
-        object-fit: contain; }
-    .footer_main_second-links {
-      height: 30px;
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center; }
-    .footer_main_second-links a {
-      color: #16194F;
-      text-decoration: none; }
-  .footer_play {
-    height: 100%;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .footer_play-logo {
-      margin-top: 40px;
-      height: 70px;
-      width: 150px; }
-    .footer_play-logo2 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .footer__col-txt {
+      text-align: center;
       margin-top: 10px; }
-    .footer_play-text {
-      margin-top: 10px;
-      color: #0A66C2; }
+    .footer__col span {
+      margin-right: auto;
+      font-size: 20px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid black; }
+    .footer__col-logo {
+      height: 90px;
+      width: 90px;
+      object-fit: contain; }
+    .footer__col-row {
+      display: flex;
+      align-items: center;
+      margin: 20px 0; }
+      .footer__col-row-logo {
+        height: 40px;
+        width: 40px;
+        margin: 5px; }
+    .footer__col-qr {
+      height: 120px;
+      width: 120px;
+      margin: 20px 0; }
+    .footer__col .nav {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px; }
+      .footer__col .nav a {
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        margin: 5px 0; }
+        .footer__col .nav a:hover {
+          color: skyblue; }
+  .footer__copyright {
+    height: 64px;
+    width: 100%;
+    background-color: #eff1f6;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .testimonial {
   margin-top: 20px;
@@ -134,27 +133,25 @@
   align-items: center;
   flex-direction: column; }
   .testimonial_head {
-    margin-top: 2rem;
-    height: 50px;
-    width: 300px;
+    margin-top: 60px;
+    padding: 6px 40px;
     background-image: linear-gradient(to left, #667eea, #764ba2);
-    border-radius: 20px;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-bottom: 60px; }
   .testimonial-card {
-    width: 100%;
+    width: 90%;
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+    margin-bottom: 90px; }
 
 .card_main {
   height: 250px;
-  width: 400px;
+  width: calc(100vw / 4 + 20);
   background-image: linear-gradient(to right, #a18cd1, #fbc2eb);
   border-radius: 30px;
   display: flex;
@@ -168,7 +165,7 @@
     align-items: center; }
     .card_main-cards-first {
       margin-left: 10px;
-      width: 140px;
+      max-width: 50%;
       height: 60px; }
     .card_main-cards-main {
       margin-left: 20px; }
@@ -189,39 +186,33 @@
     text-align: center; }
 
 .Patners {
-  margin-top: 20px;
-  height: 30rem;
-  width: 100vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-around; }
   .Patners_head {
-    margin-top: 2rem;
     height: 50px;
     width: 300px;
     background-image: linear-gradient(to left, #667eea, #764ba2);
-    border-radius: 20px;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 40px  auto 90px auto; }
   .Patners_company {
-    width: 70%;
-    height: 20%;
+    height: 160px;
     display: flex;
-    justify-content: space-evenly; }
+    align-items: center;
+    justify-content: center; }
     .Patners_company-logo {
-      width: 200px;
-      height: 150px;
-      box-shadow: rgba(0, 0, 0, 0.5); }
-    .Patners_company-logo1 {
-      width: 200px;
-      height: 100px;
-      box-shadow: rgba(0, 0, 0, 0.5); }
+      width: calc(100vw / 4);
+      box-shadow: rgba(0, 0, 0, 0.5);
+      margin: 10px 20px;
+      object-fit: cover; }
 
 .perfect {
   margin-top: 20px;
@@ -229,17 +220,16 @@
   background-image: linear-gradient(to right, #30CFD0, #330867);
   height: 500px;
   width: 100%;
-  border-radius: 600px 600px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: space-around; }
   .perfect-head {
-    margin-top: 10px;
     font-size: 2rem;
     color: white;
-    text-decoration: underline; }
+    padding-bottom: 10px;
+    border-bottom: 2px solid white; }
   .perfect-logo {
     width: 60em;
     height: 300px;

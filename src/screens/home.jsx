@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Card from "../components/card";
-
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
 
@@ -57,7 +59,13 @@ export default function HomeScreen() {
           <span>Testimonial</span>
         </div>
         <div className="testimonial-card">
-          <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+          <OwlCarousel className='owl-theme' dots={false} loop margin={20} items={3}>
+            <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+            <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+            <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+            <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+            <Card name="sonu kumar" img={require("../assets/accenture.png")} />
+          </OwlCarousel>
         </div>
       </section>
       <Footer />
