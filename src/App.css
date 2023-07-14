@@ -58,3 +58,77 @@
     .header__c .auth__profile-img {
       height: 50px;
       width: 50px; }
+
+.carousel {
+  height: 400px;
+  width: 100%;
+  background-image: linear-gradient(to right, #FBC2EB, #A6C1EE);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+  position: relative; }
+  .carousel__h3 {
+    font-size: 46px;
+    color: #1A40C7; }
+    .carousel__h3:last-child {
+      margin-left: 200px; }
+  .carousel__img {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px; }
+    .carousel__img:hover {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); }
+    .carousel__img img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover; }
+  .carousel__search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+    background-color: white;
+    width: 74%;
+    height: 200px;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .carousel__search h2 {
+      font-size: 32px;
+      color: gray;
+      display: flex;
+      align-items: center; }
+    .carousel__search form {
+      width: 90%;
+      height: 60%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between; }
+      .carousel__search form select {
+        padding: 10px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        width: 40%;
+        background-color: white; }
+      .carousel__search form button {
+        padding: 10px 30px;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FBC2EB;
+        cursor: pointer; }
+        .carousel__search form button:hover {
+          background-color: #A6C1EE; }
+        .carousel__search form button .icon {
+          font-size: 16px; }

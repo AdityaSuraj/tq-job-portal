@@ -39,7 +39,7 @@ export default function Header() {
                             </div>
                             :
                             <ul>
-                                <li onClick={()=>{setIsLogined(true)}}>
+                                <li onClick={() => { setIsLogined(true) }}>
                                     <MdLogin className="icon" />
                                     <span>Login</span>
                                 </li>
