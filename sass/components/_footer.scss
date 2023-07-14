@@ -1,0 +1,25 @@
+.footer_main{
+    width: 100vw;
+    background-image: linear-gradient(to left,#E6E9F0,#EEF1F5);
+    height: 400px;
+    position: relative;
+
+    &-copyright {
+        color: #6A6D9F;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 240px;
+    }
+    
+    &-logo{
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+    }
+}
+
+// .footer_main-logo
