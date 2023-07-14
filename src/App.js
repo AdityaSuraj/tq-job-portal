@@ -32,7 +32,8 @@ import {
 } from "react-router-dom";
 import HomeScreen from './screens/home';
 import LoginScreen from './screens/login';
-import SignupScreen from './screens/signup';
+import SignupScreen from './screens/contactus';
+import contactus from './screens/contactus';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/signup" Component={SignupScreen}/>
         <Route path="/login" Component={LoginScreen}/>
         <Route path="/" Component={HomeScreen}/>
+        <Route path="/contactus" Component={contactus}/>
       </Routes>
     </Router >
   );
