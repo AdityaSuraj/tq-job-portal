@@ -42,32 +42,6 @@ export default function Footer() {
                 </div>
 
             </div>
-            {/* <div className="footer_main_second">
-                <div className="footer_main_second-follow">
-                    <p>Follow us</p>
-                </div>
-                <div className="footer_main_second-logos">
-                    <img src={require("../assets/Twitter.png")} alt="" className=" footer_main_second-logos-icon" />
-                    <img src={require("../assets/Facebook.png")} alt="" className=" footer_main_second-logos-icon" />
-                    <img src={require("../assets/linden.png")} alt="" className=" footer_main_second-logos-icon" />
-                </div>
-                <div className="footer_main_second-links">
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                </div>
-                <div className="footer_main_second-links">
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                </div>
-                <div className="footer_main_second-links">
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                    <a href="http://" target="_blank" >home</a>
-                </div>
-            </div> */}
-
             <div className="footer__copyright">
                 <p>Copyright © 2020 Taquino India Pvt. Ltd.  All rights reserved.</p>
             </div>
