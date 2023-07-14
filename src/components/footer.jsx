@@ -43,7 +43,7 @@ export default function Footer() {
 
             </div>
             <div className="footer__copyright">
-                <p>Copyright © 2020 Taquino India Pvt. Ltd.  All rights reserved.</p>
+                <p>Copyright © {(new Date()).getFullYear()} Taquino India Pvt. Ltd.  All rights reserved.</p>
             </div>
         </footer>
     )
