@@ -1,8 +1,8 @@
 @import "./abstarct/variables";
 @import "./abstarct/mixin";
+@import "./base/_style";
 
-
-@import "./base/style";
-
-@import "./components/header";
-@import "./components/footer";
+@import "./components/_header";
+@import "./components/_footer";
+@import "./components/_job";
+@import "./components/jobmain";

@@ -33,6 +33,8 @@ import {
 import HomeScreen from './screens/home';
 import LoginScreen from './screens/login';
 import SignupScreen from './screens/signup';
+// import job_info from './screens/job_info';
+import job from './screens/job';
 
 function App() {
   return (
@@ -41,6 +43,7 @@ function App() {
         <Route path="/signup" Component={SignupScreen}/>
         <Route path="/login" Component={LoginScreen}/>
         <Route path="/" Component={HomeScreen}/>
+        <Route path="/job" Component={job}/>
       </Routes>
     </Router >
   );

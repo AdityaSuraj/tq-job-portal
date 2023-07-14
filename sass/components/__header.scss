@@ -3,12 +3,12 @@
     width: 100%;
     @include primary-gradient;
 
-    &__c {
+    &.__c {
         display: flex;
         align-items: center;
         padding: 10px 24px;
 
-        &-logo {
+        &.-logo {
             height: 50px;
             width: 50px;
             object-fit: contain;

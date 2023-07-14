@@ -1,0 +1,45 @@
+.card{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    &_main{
+        width: 350px;
+        height: 450px;
+        background-color: rgb(12, 149, 217);
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        &_img{
+            margin-top: 10px;
+            width: 80%;
+            height: 180px;
+            background-color: red;
+            &_1{
+                width: 100%;
+                height: 180px;
+            }
+        }
+        &_details{
+            height: 100px;
+            width: 100%;
+            background-color: aqua;
+        }
+        &_btn{
+            width: 40%;
+            height: 50px;
+            font-size: larger;
+        }
+    }
+    
+   
+    
+}
+
+
+
