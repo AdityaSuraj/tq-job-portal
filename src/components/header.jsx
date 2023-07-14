@@ -22,11 +22,11 @@ export default function Header() {
                         </li>
                         <li>
                             <MdPeople className="icon" />
-                            <span>About</span>
+                            <span>About Us</span>
                         </li>
                         <li>
                             <MdCall className="icons" />
-                            <span>Contact</span>
+                            <span>Contact Us</span>
                         </li>
                     </ul>
                 </nav>
@@ -39,7 +39,7 @@ export default function Header() {
                             </div>
                             :
                             <ul>
-                                <li onClick={()=>{setIsLogined(true)}}>
+                                <li onClick={() => { setIsLogined(true) }}>
                                     <MdLogin className="icon" />
                                     <span>Login</span>
                                 </li>
