@@ -33,7 +33,7 @@ export default function Footer() {
                     <span>Social Media Links</span>
                     <div className="footer__col-row">
                         <img src={require("../assets/Twitter.png")} alt="" className="footer__col-row-logo" />
-                        <img src={require("../assets/Facebook.png")} alt="" className="footer__col-row-logo" />
+                        <img src={require("../assets/facebook.png")} alt="" className="footer__col-row-logo" />
                         <img src={require("../assets/linden.png")} alt="" className="footer__col-row-logo" />
                     </div>
                     <p>Download App From Playtore</p>
