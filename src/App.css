@@ -116,13 +116,6 @@ body {
         margin: 5px 0; }
         .footer__col .nav a:hover {
           color: skyblue; }
-  .footer__copyright {
-    height: 64px;
-    width: 100%;
-    background-color: #eff1f6;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
 
 .testimonial {
   margin-top: 20px;
@@ -144,10 +137,6 @@ body {
     color: white;
     font-size: 30px;
     margin-bottom: 60px; }
-  .testimonial-card {
-    width: 90%;
-    height: 400px;
-    margin-bottom: 90px; }
 
 .card_main {
   height: 250px;
