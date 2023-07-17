@@ -1,6 +1,6 @@
 .carousel {
     height: 400px;
-    width: 100%;
+    width: 100vw;
     @include primary-gradient;
     margin-top: 2px;
     display: flex;

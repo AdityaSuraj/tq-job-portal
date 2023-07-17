@@ -1,6 +1,9 @@
 .card_main {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: 250px;
-  width: calc(100vw / 4 + 20);
+  width: calc(100vw / 4 + 20px);
   // background-color: yellow;
   background-image: linear-gradient(to right, #a18cd1, #fbc2eb);
   border-radius: 30px;
@@ -42,7 +45,7 @@
 
   &-cards2 {
     margin-top: 5px;
-    width: 350px;
+    width: 94%;
     height: 120px;
     border-radius: 20px;
     background-color: white;

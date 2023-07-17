@@ -77,4 +77,14 @@
     }
 
   }
+
+
+  &__copyright {
+    height: 64px;
+    width: 100%;
+    background-color: #eff1f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
