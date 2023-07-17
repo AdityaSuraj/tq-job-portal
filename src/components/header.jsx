@@ -1,5 +1,6 @@
 import React from "react";
 import { MdAppRegistration, MdCall, MdHome, MdLogin, MdPeople } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [isLogined, setIsLogined] = React.useState(false);
@@ -18,15 +19,15 @@ export default function Header() {
                     <ul>
                         <li>
                             <MdHome className="icon" />
-                            <span>Home</span>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
                             <MdPeople className="icon" />
-                            <span>About</span>
+                            <span>About Us</span>
                         </li>
                         <li>
                             <MdCall className="icons" />
-                            <span>Contact</span>
+                            <span>Contact Us</span>
                         </li>
                     </ul>
                 </nav>
@@ -39,7 +40,7 @@ export default function Header() {
                             </div>
                             :
                             <ul>
-                                <li onClick={()=>{setIsLogined(true)}}>
+                                <li onClick={() => { setIsLogined(true) }}>
                                     <MdLogin className="icon" />
                                     <span>Login</span>
                                 </li>
