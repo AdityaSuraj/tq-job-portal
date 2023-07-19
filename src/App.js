@@ -26,7 +26,6 @@ import './App.css';
 import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes
 } from "react-router-dom";
@@ -35,7 +34,7 @@ import LoginScreen from './screens/login';
 import SignupScreen from './screens/signup';
 // import job_info from './screens/job_info';
 import job from './screens/job';
-
+import Form from './screens/Form';
 function App() {
   return (
     <Router>
@@ -44,8 +43,9 @@ function App() {
         <Route path="/login" Component={LoginScreen}/>
         <Route path="/" Component={HomeScreen}/>
         <Route path="/job" Component={job}/>
+        <Route path="/Form" Component={Form}/>  
       </Routes>
-    </Router >
+    </Router>
   );
 }
 export default App;
