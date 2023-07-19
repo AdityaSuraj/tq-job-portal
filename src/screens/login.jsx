@@ -6,6 +6,8 @@ export default function LoginScreen() {
       <div className="login_main-box">
         <img src={require("../assets/logo.png")} alt="" srcset="" />
       </div>
+
+
       <div className="login_main_second">
         <div className="login_main_second-head">
           <h1>Login in your Job Hunter Account</h1>
@@ -17,27 +19,31 @@ export default function LoginScreen() {
             srcset=""
             className="login_main_second-form-gl"
           />
-          login with<a href="https://www.google.com/"> Google</a>
+          login with <a href="https://www.google.com/"> Google </a>
         </div>
-        <br />
-
         <div className="login_main_second-form">
-        <img
+          <img
             src={require("../assets/facebook.png")}
             alt=""
             srcset=""
             className="login_main_second-form-gl"
           />
-          login with<a href="https://www.facebook.com/"> Facebook</a>
+          login with <a href="https://www.facebook.com/"> Facebook </a>
         </div>
-        <div className="inputs">
+
+        <form action="#">
+          <input type="text" className="input" placeholder="Email"/>
+          <input type="text" className="input" placeholder="Password"/>
+          
+        </form>
+        {/* <div className="inputs">
           <div className="login_main_second-form1">
             <input type="text" placeholder="Email-id" />
           </div>
           <div className="login_main_second-form1">
             <input type="text" placeholder="Password" />
           </div>
-        </div>
+        </div> */}
 
         <div className="login_main_second-form3">Log in </div>
         <p className="text">or Forget Password</p>

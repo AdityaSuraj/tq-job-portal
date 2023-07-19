@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+.testimonial {
+  // background-color: black;
+  margin-top: 20px;
+  height: 25rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &_head {
+    margin-top: 60px;
+    padding: 6px 40px;
+    background-image: linear-gradient(to left, #667eea, #764ba2);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+}
