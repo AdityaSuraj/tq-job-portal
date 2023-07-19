@@ -12,6 +12,10 @@
   align-items: center;
   flex-direction: column;
 
+  @include respond(phone){
+    width: 90%;
+  }
+
   &-cards {
     height: 100px;
     width: 100%;

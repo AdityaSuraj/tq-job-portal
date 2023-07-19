@@ -21,9 +21,21 @@ body {
       height: 50px;
       width: 50px;
       object-fit: contain; }
+    .header__c-hamburger {
+      display: none; }
+      @media (max-width: 600px) {
+        .header__c-hamburger {
+          display: block;
+          margin-left: auto;
+          font-size: 36px;
+          color: white;
+          cursor: pointer; } }
     .header__c nav {
       margin-left: auto;
       margin-right: auto; }
+      @media (max-width: 600px) {
+        .header__c nav {
+          display: none; } }
       .header__c nav ul {
         list-style: none;
         display: flex;
@@ -36,11 +48,16 @@ body {
           padding: 8px 14px;
           border-radius: 0 10px 0 10px;
           cursor: pointer; }
-          .header__c nav ul li span {
+          .header__c nav ul li a {
+            text-decoration: none;
             line-height: 1;
-            margin-left: 8px; }
+            margin-left: 8px;
+            color: black; }
           .header__c nav ul li:hover {
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 600px) {
+      .header__c .auth {
+        display: none; } }
     .header__c .auth ul {
       list-style: none;
       display: flex;
@@ -56,14 +73,55 @@ body {
           border-radius: 10px 0 0 10px; }
         .header__c .auth ul li:nth-child(2) {
           border-radius: 0 10px 10px 0; }
-        .header__c .auth ul li span {
+        .header__c .auth ul li a {
+          text-decoration: none;
           line-height: 1;
-          margin-left: 8px; }
+          margin-left: 8px;
+          color: black; }
         .header__c .auth ul li:hover {
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
     .header__c .auth__profile-img {
       height: 50px;
       width: 50px; }
+
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 60;
+  transition: all 0.3s linear; }
+  @media (max-width: 600px) {
+    .drawer {
+      display: block; } }
+  .drawer__logo {
+    height: 120px;
+    width: 100%;
+    object-fit: contain; }
+  .drawer hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2); }
+  .drawer ul {
+    list-style: none; }
+    .drawer ul li {
+      padding: 10px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: flex;
+      align-items: center; }
+      .drawer ul li .icon {
+        font-size: 24px; }
+      .drawer ul li a {
+        margin-left: 8px;
+        text-decoration: none;
+        color: black; }
 
 .footer {
   display: flex;
@@ -72,11 +130,17 @@ body {
   .footer__cols {
     display: flex;
     min-height: 320px; }
+    @media (max-width: 600px) {
+      .footer__cols {
+        flex-direction: column; } }
   .footer__col {
     display: flex;
     flex-direction: column;
     width: calc(100vw / 4);
     padding: 20px 30px; }
+    @media (max-width: 600px) {
+      .footer__col {
+        width: 100%; } }
     .footer__col:first-child {
       display: flex;
       flex-direction: column;
@@ -124,6 +188,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 600px) {
+      .footer__copyright {
+        text-align: center;
+        padding: 10px 10px; } }
 
 .testimonial {
   margin-top: 20px;
@@ -134,8 +202,7 @@ body {
   flex-direction: column;
   margin-bottom: 60px; }
   .testimonial_head {
-    margin: 60px auto;
-    padding: 6px 40px;
+    padding: 6px 12px;
     background-image: linear-gradient(to left, #667eea, #764ba2);
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -143,7 +210,11 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-bottom: 30px; }
+    @media (max-width: 600px) {
+      .testimonial_head {
+        font-size: 24px; } }
 
 .card_main {
   position: relative;
@@ -157,6 +228,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  @media (max-width: 600px) {
+    .card_main {
+      width: 90%; } }
   .card_main-cards {
     height: 100px;
     width: 100%;
@@ -185,15 +259,13 @@ body {
     text-align: center; }
 
 .Patners {
-  margin-top: 160px;
+  margin-top: 200px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; }
+  flex-direction: column; }
+  @media (max-width: 600px) {
+    .Patners {
+      margin-top: 220px; } }
   .Patners_head {
-    height: 50px;
-    width: 300px;
     background-image: linear-gradient(to left, #667eea, #764ba2);
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -202,21 +274,37 @@ body {
     align-items: center;
     color: white;
     font-size: 30px;
-    margin: 40px  auto 90px auto; }
+    margin: 0 auto;
+    padding: 6px 12px;
+    margin-bottom: 32px; }
+    @media (max-width: 600px) {
+      .Patners_head {
+        width: auto;
+        height: auto;
+        font-size: 24px;
+        margin-bottom: 24px; } }
   .Patners_company {
-    height: 160px;
+    height: auto;
+    width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px; }
+    @media (max-width: 600px) {
+      .Patners_company {
+        height: auto; } }
     .Patners_company-logo {
       width: calc(100vw / 4);
       box-shadow: rgba(0, 0, 0, 0.5);
       margin: 10px 20px;
-      object-fit: cover; }
+      object-fit: cover;
+      border-radius: 10px; }
+      @media (max-width: 600px) {
+        .Patners_company-logo {
+          width: calc(100vw / 2 - 40px); } }
 
 .perfect {
-  margin-top: 20px;
-  background-color: red;
   background-image: linear-gradient(to right, #30CFD0, #330867);
   height: 500px;
   width: 100%;
@@ -225,11 +313,19 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-around; }
+  @media (max-width: 600px) {
+    .perfect {
+      height: auto; } }
   .perfect-head {
-    font-size: 2rem;
+    font-size: 32px;
     color: white;
     padding-bottom: 10px;
     border-bottom: 2px solid white; }
+    @media (max-width: 600px) {
+      .perfect-head {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0; } }
   .perfect-logo {
     width: 60em;
     height: 300px;
@@ -237,7 +333,12 @@ body {
     justify-content: center;
     justify-content: space-evenly;
     align-items: center; }
+    @media (max-width: 600px) {
+      .perfect-logo {
+        flex-direction: column;
+        height: auto; } }
     .perfect-logo-img {
+      margin: 16px auto;
       width: 300px;
       height: 300px;
       display: flex;
@@ -246,12 +347,26 @@ body {
       align-items: center;
       justify-content: space-around;
       text-align: center; }
+      .perfect-logo-img:first-child {
+        margin-top: 36px; }
+      @media (max-width: 600px) {
+        .perfect-logo-img {
+          width: auto;
+          height: auto; } }
       .perfect-logo-img-1 {
         height: 200px;
         width: 200px; }
+        @media (max-width: 600px) {
+          .perfect-logo-img-1 {
+            width: 160px;
+            height: 160px; } }
     .perfect-logo-img span {
       color: white;
-      font-size: 2em; }
+      font-size: 32px; }
+      @media (max-width: 600px) {
+        .perfect-logo-img span {
+          font-size: 20px;
+          margin-top: 10px; } }
 
 .patners {
   width: 100px;
@@ -395,17 +510,35 @@ body {
   justify-content: space-between;
   padding: 0 90px;
   position: relative; }
+  @media (max-width: 600px) {
+    .carousel {
+      padding: 0 20px;
+      flex-direction: column;
+      height: auto; } }
   .carousel__h3 {
     font-size: 46px;
     color: #1A40C7; }
+    @media (max-width: 600px) {
+      .carousel__h3 {
+        font-size: 30px;
+        margin: 10px 0; } }
     .carousel__h3:last-child {
       margin-left: 200px; }
+      @media (max-width: 600px) {
+        .carousel__h3:last-child {
+          margin-left: 0; } }
   .carousel__img {
     height: 300px;
     width: 300px;
     background-color: white;
     border-radius: 50%;
     padding: 20px; }
+    @media (max-width: 600px) {
+      .carousel__img {
+        height: 240px;
+        width: 240px;
+        padding: 14px;
+        margin-bottom: 80px; } }
     .carousel__img:hover {
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); }
     .carousel__img img {
@@ -428,23 +561,40 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 600px) {
+      .carousel__search {
+        top: 86%;
+        width: 90%;
+        height: auto; } }
     .carousel__search h2 {
       font-size: 32px;
       color: gray;
       display: flex;
       align-items: center; }
+      @media (max-width: 600px) {
+        .carousel__search h2 {
+          font-size: 20px;
+          text-align: center; } }
     .carousel__search form {
       width: 90%;
       height: 60%;
       display: flex;
       align-items: flex-end;
       justify-content: space-between; }
+      @media (max-width: 600px) {
+        .carousel__search form {
+          width: 100%;
+          flex-direction: column; } }
       .carousel__search form select {
         padding: 10px 20px;
         border: 1px solid rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         width: 40%;
         background-color: white; }
+        @media (max-width: 600px) {
+          .carousel__search form select {
+            width: 100%;
+            margin: 5px 0; } }
       .carousel__search form button {
         padding: 10px 30px;
         border: none;
@@ -454,6 +604,10 @@ body {
         justify-content: center;
         background-color: #FBC2EB;
         cursor: pointer; }
+        @media (max-width: 600px) {
+          .carousel__search form button {
+            width: 100%;
+            margin-top: 5px; } }
         .carousel__search form button:hover {
           background-color: #A6C1EE; }
         .carousel__search form button .icon {

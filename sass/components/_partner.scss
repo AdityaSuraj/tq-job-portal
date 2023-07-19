@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
 .Patners {
-    margin-top: 160px;
+    margin-top: 200px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+
+    @include respond(phone) {
+        margin-top: 220px;
+    }
 
     &_head {
-        height: 50px;
-        width: 300px;
         background-image: linear-gradient(to left, #667eea, #764ba2);
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
@@ -19,20 +18,41 @@
         align-items: center;
         color: white;
         font-size: 30px;
-        margin: 40px  auto 90px auto;
+        margin: 0 auto;
+        padding: 6px 12px;
+        margin-bottom: 32px;
+
+        @include respond(phone) {
+            width: auto;
+            height: auto;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
     }
 
     &_company {
-        height: 160px;
+        height: auto;
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        @include respond(phone) {
+            height: auto;
+        }
 
         &-logo {
             width: calc(100vw / 4);
             box-shadow: rgba(0, 0, 0, 0.5);
             margin: 10px 20px;
             object-fit: cover;
+            border-radius: 10px;
+
+            @include respond(phone) {
+                width: calc(100vw / 2 - 40px);
+            }
         }
 
     }

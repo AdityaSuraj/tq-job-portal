@@ -8,6 +8,13 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { MdSearch } from "react-icons/md";
 
 export default function HomeScreen() {
+
+  const [isMobileDevice, setIsMobileDevice] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMobileDevice(matchMedia("(max-width: 600px)").matches)
+  }, [])
+
   return (
     <div>
       <Header />
@@ -45,20 +52,12 @@ export default function HomeScreen() {
           <span>Our Patners</span>
         </div>
         <div className="Patners_company">
-
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-        </div>
-        <div className="Patners_company">
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-        </div>
-        <div className="Patners_company">
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
-          <img src={require("../assets/Taquino.png")} alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
+          <img src="https://img.freepik.com/premium-psd/colorful-solid-logo-mockup-carbon-fiber_167120-240.jpg?w=1380" alt="" srcset="" className="Patners_company-logo" />
         </div>
       </section>
       <section className="perfect">
@@ -87,7 +86,7 @@ export default function HomeScreen() {
           <span>Testimonial</span>
         </div>
         <div className="testimonial-card">
-          <OwlCarousel className='owl-theme' dots={false} loop={true} autoplay margin={10} items={3} >
+          <OwlCarousel className='owl-theme' dots={false} loop={true} autoplay items={isMobileDevice ? 1 : 3} responsive={{}} >
             <Card name="sonu kumar" img={require("../assets/accenture.png")} />
             <Card name="sonu kumar" img={require("../assets/accenture.png")} />
             <Card name="sonu kumar" img={require("../assets/accenture.png")} />

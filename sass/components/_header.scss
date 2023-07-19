@@ -14,9 +14,25 @@
             object-fit: contain;
         }
 
+        &-hamburger {
+            display: none;
+
+            @include respond(phone) {
+                display: block;
+                margin-left: auto;
+                font-size: 36px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
         & nav {
             margin-left: auto;
             margin-right: auto;
+
+            @include respond(phone) {
+                display: none;
+            }
 
             & ul {
                 list-style: none;
@@ -32,13 +48,15 @@
                     border-radius: 0 10px 0 10px;
                     cursor: pointer;
 
-                    & span{
+                    & a {
+                        text-decoration: none;
                         line-height: 1;
                         margin-left: 8px;
+                        color: black;
                     }
 
-                    &:hover{
-                        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+                    &:hover {
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
                     }
                 }
 
@@ -46,6 +64,10 @@
         }
 
         & .auth {
+
+            @include respond(phone) {
+                display: none;
+            }
 
             & ul {
                 list-style: none;
@@ -61,32 +83,88 @@
                     // border-radius: 0 10px 0 10px;
                     cursor: pointer;
 
-                    &:first-child{
+                    &:first-child {
                         border-radius: 10px 0 0 10px;
                     }
 
-                    &:nth-child(2){
+                    &:nth-child(2) {
                         border-radius: 0 10px 10px 0;
                     }
 
-                    & span{
+                    & a {
+                        text-decoration: none;
                         line-height: 1;
                         margin-left: 8px;
+                        color: black;
                     }
 
-                    &:hover{
-                        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+                    &:hover {
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
                     }
-                    
+
                 }
 
-                
+
             }
-            &__profile{
-                &-img{
+
+            &__profile {
+                &-img {
                     height: 50px;
                     width: 50px;
                 }
+            }
+        }
+    }
+}
+
+.drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 60;
+    transition: all 0.3s linear;
+
+    @include respond(phone){
+        display: block;
+    }
+
+    &__logo {
+        height: 120px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    & hr {
+        height: 1px;
+        width: 100%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    & ul {
+        list-style: none;
+
+        & li {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            & .icon {
+                font-size: 24px;
+            }
+
+            & a {
+                margin-left: 8px;
+                text-decoration: none;
+                color: black;
             }
         }
     }
