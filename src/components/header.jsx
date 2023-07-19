@@ -23,11 +23,11 @@ export default function Header() {
                         </li>
                         <li>
                             <MdPeople className="icon" />
-                            <span>About Us</span>
+                            <Link to="/aboutus">About Us</Link>
                         </li>
                         <li>
                             <MdCall className="icons" />
-                            <span>Contact Us</span>
+                            <Link to="/contactus">Contact Us</Link>
                         </li>
                     </ul>
                 </nav>
@@ -42,11 +42,11 @@ export default function Header() {
                             <ul>
                                 <li onClick={() => { setIsLogined(true) }}>
                                     <MdLogin className="icon" />
-                                    <span>Login</span>
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
                                     <MdAppRegistration className="icon" />
-                                    <span>Signup</span>
+                                    <Link to="/signup">Signup</Link>
                                 </li>
                             </ul>
                     }
