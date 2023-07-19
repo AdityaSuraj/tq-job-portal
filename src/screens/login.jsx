@@ -12,46 +12,31 @@ export default function LoginScreen() {
         <div className="login_main_second-head">
           <h1>Login in your Job Hunter Account</h1>
         </div>
-        <div className="login_main_second-form">
-          <img
-            src={require("../assets/Google - png.png")}
-            alt=""
-            srcset=""
-            className="login_main_second-form-gl"
-          />
-          login with <a href="https://www.google.com/"> Google </a>
-        </div>
-        <div className="login_main_second-form">
-          <img
-            src={require("../assets/facebook.png")}
-            alt=""
-            srcset=""
-            className="login_main_second-form-gl"
-          />
-          login with <a href="https://www.facebook.com/"> Facebook </a>
+        <div className="login_main_second-link">
+          <div className="login_main_second-link-1">
+            <img src={require("../assets/facebook.png")}></img>
+            <span> Sign up with </span>
+            <a href="">Facebook</a>
+          </div>
+
+          <div className="login_main_second-link-2">
+            <img src={require("../assets/Google - png.png")}></img>
+            <span> Sign up with </span>
+            <a href="">Google</a>
+          </div>
         </div>
 
-        <form action="#">
+        <form action="#"  className="inputs">
           <input type="text" className="input" placeholder="Email"/>
           <input type="text" className="input" placeholder="Password"/>
-          
         </form>
-        {/* <div className="inputs">
-          <div className="login_main_second-form1">
-            <input type="text" placeholder="Email-id" />
-          </div>
-          <div className="login_main_second-form1">
-            <input type="text" placeholder="Password" />
-          </div>
-        </div> */}
-
-        <div className="login_main_second-form3">Log in </div>
-        <p className="text">or Forget Password</p>
+          <button type="submit" className="btn">Login</button>
+        <p className="text">or Forgot Password</p>
         <p className="text1">
-          Already have an Account ? <a href=""> Sign Up </a>
+          Already have an Account ?<br/> <a href=""> Sign Up </a>
         </p>
       </div>
-      <br />
+    
     </section>
   );
 }
