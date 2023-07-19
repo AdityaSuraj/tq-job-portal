@@ -7,6 +7,10 @@
   &__cols {
     display: flex;
     min-height: 320px;
+
+    @include respond(phone){
+      flex-direction: column;
+    }
   }
 
   &__col {
@@ -14,6 +18,10 @@
     flex-direction: column;
     width: calc(100vw / 4);
     padding: 20px 30px;
+
+    @include respond(phone){
+      width: 100%;
+    }
 
     &:first-child {
       display: flex;
@@ -78,6 +86,7 @@
 
   }
 
+
   &__copyright {
     height: 64px;
     width: 100%;
@@ -85,5 +94,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include respond(phone){
+      text-align: center;
+      padding: 10px 10px;
+    }
   }
 }

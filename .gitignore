@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# CSS BUILD
+/src/App.css
+
 # testing
 /coverage
 

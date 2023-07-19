@@ -16,7 +16,6 @@ export default function Footer() {
                         <a href="http://" target="_blank" >Search Job</a>
                         <a href="http://" target="_blank" >Blogs</a>
                         <a href="http://" target="_blank" >About us</a>
-                        <a href="http://" target="_blank" >About us</a>
                         <a href="http://" target="_blank" >Contact us</a>
 
                     </div>
