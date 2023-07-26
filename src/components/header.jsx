@@ -1,8 +1,10 @@
 import React from "react";
-import { MdAppRegistration, MdCall, MdHome, MdLogin, MdPeople } from "react-icons/md";
+import { MdAppRegistration, MdCall, MdHome, MdLogin, MdMenu, MdPeople } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [isLogined, setIsLogined] = React.useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
     // React.useEffect(() => {
     //     setTimeout(() => {
@@ -10,23 +12,60 @@ export default function Header() {
     //     }, 2000)
     // }, [])
 
+    const handleDrawerStatus = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+        if(isDrawerOpen){
+            document.body.style.overflowY = "auto"
+        }else{
+            document.body.style.overflowY = "hidden"
+
+        }
+    }
+
     return (
         <header className="header">
+            <div className="drawer" style={{ left: isDrawerOpen ? 0 : -240 }}>
+                <img src={require("../assets/logo.png")} alt="Website Logo" className="drawer__logo" />
+                <hr />
+                <ul>
+                    <li>
+                        <MdHome className="icon" />
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <MdPeople className="icon" />
+                        <Link to="/aboutus">About Us</Link>
+                    </li>
+                    <li>
+                        <MdCall className="icons" />
+                        <Link to="/contactus">Contact Us</Link>
+                    </li>
+                    <li>
+                        <MdLogin className="icon" />
+                        <Link to="/login">Login</Link>
+                    </li>
+                    <li>
+                        <MdAppRegistration className="icon" />
+                        <Link to="/signup">Signup</Link>
+                    </li>
+                </ul>
+            </div>
             <div className="header__c">
                 <img src={require("../assets/logo.png")} alt="Website Logo" className="header__c-logo" />
+                <MdMenu className="header__c-hamburger" onClick={handleDrawerStatus} />
                 <nav className="nav">
                     <ul>
                         <li>
                             <MdHome className="icon" />
-                            <span>Home</span>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
                             <MdPeople className="icon" />
-                            <span>About Us</span>
+                            <Link to="/aboutus">About Us</Link>
                         </li>
                         <li>
                             <MdCall className="icons" />
-                            <span>Contact Us</span>
+                            <Link to="/contactus">Contact Us</Link>
                         </li>
                     </ul>
                 </nav>
@@ -41,11 +80,11 @@ export default function Header() {
                             <ul>
                                 <li onClick={() => { setIsLogined(true) }}>
                                     <MdLogin className="icon" />
-                                    <span>Login</span>
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
                                     <MdAppRegistration className="icon" />
-                                    <span>Signup</span>
+                                    <Link to="/signup">Signup</Link>
                                 </li>
                             </ul>
                     }

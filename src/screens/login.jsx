@@ -2,7 +2,8 @@ import React from "react";
 
 export default function LoginScreen() {
   return (
-    <section className="login_main">
+    <div className="login">
+    <div className="login_main">
       <div className="login_main-box">
         <img src={require("../assets/logo.png")} alt="" srcset="" />
       </div>
@@ -29,14 +30,15 @@ export default function LoginScreen() {
         <form action="#"  className="inputs">
           <input type="text" className="input" placeholder="Email"/>
           <input type="text" className="input" placeholder="Password"/>
-        </form>
           <button type="submit" className="btn">Login</button>
+        </form>
         <p className="text">or Forgot Password</p>
         <p className="text1">
           Already have an Account ?<br/> <a href=""> Sign Up </a>
         </p>
       </div>
     
-    </section>
+    </div>
+    </div>
   );
 }
