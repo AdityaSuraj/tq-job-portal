@@ -22,7 +22,7 @@ export default function HomeScreen() {
       <div className="carousel">
         <div className="carousel__title">
           <h3 className="carousel__h3">Officia aliquip irure</h3>
-          <h3 className="carousel__h3">Officia aliquip</h3>
+          <h3 className="carousel__h3">Officia aliquip.</h3>
         </div>
 
         <div className="carousel__img">
