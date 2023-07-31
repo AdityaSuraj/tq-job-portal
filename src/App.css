@@ -82,9 +82,34 @@ body {
           color: black; }
         .header__c .auth ul li:hover {
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
-    .header__c .auth__profile-img {
-      height: 50px;
-      width: 50px; }
+    .header__c .auth__profile {
+      position: relative; }
+      .header__c .auth__profile-img {
+        height: 50px;
+        width: 50px;
+        cursor: pointer; }
+      .header__c .auth__profile-drawer {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 200px;
+        right: 0;
+        background-color: white;
+        z-index: 10; }
+        .header__c .auth__profile-drawer ul {
+          display: flex;
+          flex-direction: column;
+          list-style: none; }
+          .header__c .auth__profile-drawer ul li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 10px 10px; }
+            .header__c .auth__profile-drawer ul li .icon {
+              font-size: 22px; }
+            .header__c .auth__profile-drawer ul li span {
+              margin-left: 6px; }
 
 .drawer {
   display: none;

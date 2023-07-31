@@ -10,9 +10,27 @@ import { MdSearch } from "react-icons/md";
 export default function HomeScreen() {
 
   const [isMobileDevice, setIsMobileDevice] = React.useState(false);
+  const [cities,setCities] = React.useState(null);
 
+  const getHomeScreenData = ()=>{
+    fetch('http://localhost:8000/home-screen')
+    .then((res)=>res.json())
+    .then((res)=>{
+      if(res.message === "success"){
+        setCities(
+          res.data.cities.map((city,index)=>{
+            return (
+              <option value={city.name} key={index}>{city.name}</option>
+            )
+          })
+        )
+      }
+    })
+  }
+ 
   React.useEffect(() => {
-    setIsMobileDevice(matchMedia("(max-width: 600px)").matches)
+    setIsMobileDevice(matchMedia("(max-width: 600px)").matches);
+    getHomeScreenData();
   }, [])
 
   return (
@@ -34,6 +52,9 @@ export default function HomeScreen() {
           <form action="#">
             <select name="City" id="">
               <option value="">Select City </option>
+              {
+                cities
+              }
             </select>
             <select name="Role" id="">
               <option value="">Select Job Role </option>
