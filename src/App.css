@@ -811,6 +811,135 @@ body {
         .carousel__search form button .icon {
           font-size: 16px; }
 
+.src {
+  padding: 36px;
+  display: flex;
+  justify-content: space-between; }
+  .src__l {
+    width: 46%; }
+    .src__l .card {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 16px;
+      border-radius: 10px;
+      cursor: pointer; }
+      .src__l .card h2 {
+        font-size: 20px;
+        font-family: "Roboto", sans-serif; }
+      .src__l .card .companyname {
+        font-size: 15px;
+        font-family: "Roboto", sans-serif; }
+      .src__l .card .row {
+        display: flex;
+        align-items: center; }
+      .src__l .card .wrap {
+        display: flex;
+        flex-wrap: wrap; }
+        .src__l .card .wrap .item {
+          background-color: rgba(0, 0, 0, 0.1);
+          margin: 10px 10px 10px 0;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          padding: 4px 8px; }
+          .src__l .card .wrap .item span {
+            margin-left: 4px;
+            font-family: "Roboto", sans-serif; }
+      .src__l .card .desc ul {
+        list-style-type: circle;
+        margin-left: 20px; }
+        .src__l .card .desc ul li {
+          font-family: "Roboto", sans-serif; }
+      .src__l .card .bottom {
+        margin-top: 20px; }
+        .src__l .card .bottom span {
+          font-size: 12px;
+          font-family: "Roboto", sans-serif; }
+  .src__r {
+    width: 50%; }
+    .src__r .jd {
+      height: 90vh;
+      width: 100%;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      border-radius: 10px;
+      position: sticky;
+      top: 20px; }
+      .src__r .jd h2 {
+        font-size: 20px;
+        font-family: "Roboto", sans-serif; }
+      .src__r .jd .companyname {
+        font-size: 15px;
+        font-family: "Roboto", sans-serif; }
+      .src__r .jd .row {
+        display: flex;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        margin: 6px 0; }
+        .src__r .jd .row span:first-child {
+          margin-right: 10px; }
+        .src__r .jd .row span:last-child {
+          margin-left: 10px; }
+        .src__r .jd .row .btn {
+          background-color: #00aeff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin-right: 10px;
+          font-size: 16px;
+          color: white;
+          font-family: "Roboto", sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px; }
+      .src__r .jd .salaryrange {
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        margin: 6px 0; }
+      .src__r .jd hr {
+        border: none;
+        height: 2px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 16px 0; }
+      .src__r .jd .desc {
+        height: 60%;
+        overflow-y: auto; }
+        .src__r .jd .desc h5 {
+          font-size: 18px;
+          font-family: "Roboto", sans-serif;
+          margin: 10px 0; }
+        .src__r .jd .desc span {
+          font-size: 14px;
+          font-family: "Roboto", sans-serif; }
+        .src__r .jd .desc .tile .row {
+          display: flex;
+          align-items: center; }
+          .src__r .jd .desc .tile .row .icon {
+            font-size: 24px; }
+          .src__r .jd .desc .tile .row span {
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold; }
+        .src__r .jd .desc .tile .value {
+          display: inline-block;
+          padding: 4px 8px;
+          border-radius: 5px;
+          margin-left: 28px;
+          background-color: rgba(0, 0, 0, 0.1); }
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 36px 0; }
+  .placeholder img {
+    height: 320px;
+    width: 320px; }
+
 .sign {
   height: 100vh;
   width: 100vw;

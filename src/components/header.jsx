@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function Header() {
     const [isLogined, setIsLogined] = React.useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
-    const [profileDrawerOpen,setProfileDrawerOpen] = React.useState(false);
+    const [profileDrawerOpen, setProfileDrawerOpen] = React.useState(false);
     const navigate = useNavigate();
 
     React.useEffect(() => {
@@ -25,7 +25,7 @@ export default function Header() {
         }
     }
 
-    const handleLogout = ()=>{
+    const handleLogout = () => {
         localStorage.clear();
         navigate('/login')
     }
@@ -33,7 +33,9 @@ export default function Header() {
     return (
         <header className="header">
             <div className="drawer" style={{ left: isDrawerOpen ? 0 : -240 }}>
-                <img src={require("../assets/logo.png")} alt="Website Logo" className="drawer__logo" />
+                <Link to="/">
+                    <img src={require("../assets/logo.png")} alt="Website Logo" className="drawer__logo" />
+                </Link>
                 <hr />
                 <ul>
                     <li>
@@ -82,9 +84,9 @@ export default function Header() {
                         isLogined
                             ?
                             <div className="auth__profile">
-                                <img onClick={()=>{setProfileDrawerOpen(!profileDrawerOpen)}} src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" alt="User Profile Image" className="auth__profile-img" />
+                                <img onClick={() => { setProfileDrawerOpen(!profileDrawerOpen) }} src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" alt="User Profile Image" className="auth__profile-img" />
 
-                                <div className="auth__profile-drawer" style={{display:profileDrawerOpen ? "block" : "none"}}>
+                                <div className="auth__profile-drawer" style={{ display: profileDrawerOpen ? "block" : "none" }}>
                                     <ul>
                                         <li>
                                             <MdPerson className="icon" />

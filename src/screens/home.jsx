@@ -6,11 +6,16 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { MdSearch } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeScreen() {
 
   const [isMobileDevice, setIsMobileDevice] = React.useState(false);
   const [cities,setCities] = React.useState(null);
+  const [jobs,setJobs] = React.useState(null);
+  const [selectedCity,setSelectedCity] = React.useState(null);
+  const [selectedJob,setSelectedJob] = React.useState(null)
+  const navigate = useNavigate();
 
   const getHomeScreenData = ()=>{
     fetch('http://localhost:8000/home-screen')
@@ -23,9 +28,22 @@ export default function HomeScreen() {
               <option value={city.name} key={index}>{city.name}</option>
             )
           })
+        );
+
+        setJobs(
+          res.data.jobs.map((job,index)=>{
+            return (
+              <option value={job.name} key={index}>{job.name}</option>
+            )
+          })
         )
       }
     })
+  }
+
+  const handleSearchJob = (e)=>{
+    e.preventDefault();
+    navigate(`/search-result/${selectedCity}/${selectedJob}`);
   }
  
   React.useEffect(() => {
@@ -50,16 +68,19 @@ export default function HomeScreen() {
         <div className="carousel__search">
           <h2>Search For Job You Are Looking For</h2>
           <form action="#">
-            <select name="City" id="">
+            <select name="City" id=""  onChange={(e)=>{setSelectedCity(e.target.value)}}>
               <option value="">Select City </option>
               {
                 cities
               }
             </select>
-            <select name="Role" id="">
+            <select name="Role" id="" onChange={(e)=>{setSelectedJob(e.target.value)}}>
               <option value="">Select Job Role </option>
+              {
+                jobs
+              }
             </select>
-            <button>
+            <button onClick={handleSearchJob}>
               <MdSearch className="icon" />
               <p>Search</p>
             </button>
