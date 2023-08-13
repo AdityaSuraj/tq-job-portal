@@ -1,31 +1,41 @@
 import React from "react";
-import { MdAppRegistration, MdCall, MdHome, MdLogin, MdMenu, MdPeople } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { MdAppRegistration, MdBookmark, MdCall, MdHome, MdLogin, MdLogout, MdMenu, MdPeople, MdPerson } from "react-icons/md";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
     const [isLogined, setIsLogined] = React.useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+    const [profileDrawerOpen, setProfileDrawerOpen] = React.useState(false);
+    const navigate = useNavigate();
 
-    // React.useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsLogined(true);
-    //     }, 2000)
-    // }, [])
+    React.useEffect(() => {
+        let token = localStorage.getItem('token');
+        if (token) {
+            setIsLogined(true);
+        }
+    }, [])
 
     const handleDrawerStatus = () => {
         setIsDrawerOpen(!isDrawerOpen);
-        if(isDrawerOpen){
+        if (isDrawerOpen) {
             document.body.style.overflowY = "auto"
-        }else{
+        } else {
             document.body.style.overflowY = "hidden"
 
         }
     }
 
+    const handleLogout = () => {
+        localStorage.clear();
+        navigate('/login')
+    }
+
     return (
         <header className="header">
             <div className="drawer" style={{ left: isDrawerOpen ? 0 : -240 }}>
-                <img src={require("../assets/logo.png")} alt="Website Logo" className="drawer__logo" />
+                <Link to="/">
+                    <img src={require("../assets/logo.png")} alt="Website Logo" className="drawer__logo" />
+                </Link>
                 <hr />
                 <ul>
                     <li>
@@ -74,11 +84,28 @@ export default function Header() {
                         isLogined
                             ?
                             <div className="auth__profile">
-                                <img src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" alt="User Profile Image" className="auth__profile-img" />
+                                <img onClick={() => { setProfileDrawerOpen(!profileDrawerOpen) }} src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" alt="User Profile Image" className="auth__profile-img" />
+
+                                <div className="auth__profile-drawer" style={{ display: profileDrawerOpen ? "block" : "none" }}>
+                                    <ul>
+                                        <li>
+                                            <MdPerson className="icon" />
+                                            <span>My Profile</span>
+                                        </li>
+                                        <li>
+                                            <MdBookmark className="icon" />
+                                            <span>Bookmarks</span>
+                                        </li>
+                                        <li onClick={handleLogout}>
+                                            <MdLogout className="icon" />
+                                            <span>Logout</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             :
                             <ul>
-                                <li onClick={() => { setIsLogined(true) }}>
+                                <li>
                                     <MdLogin className="icon" />
                                     <Link to="/login">Login</Link>
                                 </li>

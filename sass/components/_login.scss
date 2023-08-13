@@ -1,177 +1,265 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
-.login_main {
-  height: 80vh;
-  width: 70%;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: white;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.login {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-secondary;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 
-  &-box {
-    width: 100vw;
-    height: 100vh;
-    // background-color: #a/18cd1;
-    width: 350px;
-    border-radius: 50%;
+  .login_main {
+    height: 80vh;
+    width: 70%;
+    overflow: hidden;
     position: absolute;
-    left: -15%;
-    top: -14%;
-    @include secondary-gradient;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 
-    & img{
+
+    @include respond(phone) {
+      width: 90%;
+    }
+
+
+    &-box {
+      width: 100vw;
+      height: 100vh;
+      width: 350px;
+      border-radius: 50%;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 80%;
-      height: 90px;
-      width: 90px;
-    }
-  }
+      left: -15%;
+      top: -14%;
+      @include secondary-gradient;
 
-  &_second {
-    display: flex;
-    flex-direction: column;
-    // margin-left: 100px;
-    // padding-top: 5rem;
-    // padding-left: 6rem;
-    // padding: 20px;
-    height: 100%;
-    width: 80%;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &-head {
-      font-family: "Montserrat", sans-serif;
-      padding: 20px;
-
-    }
-
-    h1 {
-      font-weight: bold;
-    }
-
-    & .inputs {
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-      margin: 10px;
-    }
-
-    &-form {
-      width: 240px;
-      margin: 10px;
-      height: 40px;
-      background-color: none;
-      padding: 10px;
-      text-align: center;
-      color: red;
-      margin: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-
-      &-gl {
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
+      @include respond(phone) {
+        display: none;
       }
 
-
+      & img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 80%;
+        height: 90px;
+        width: 90px;
+      }
     }
 
-    & form{
+
+
+    &_second {
       display: flex;
       flex-direction: column;
-      width: 240px;
+
+      height: 100%;
+      width: 80%;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      &-head {
+        font-family: "Montserrat", sans-serif;
+        padding: 20px;
+
+
+
+        @include respond(phone) {
+          font-size: 10px;
+          text-align: center;
+        }
+
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+
+      & .inputs {
+        margin: 20px;
+
+
+        @include respond(phone) {
+          margin-top: 5px;
+          padding: 24px;
+          width: 100%;
+          box-shadow: none;
+          margin-bottom: -19px;
+        }
+      }
+
+      &-link {
+        width: 240px;
+        height: 15%;
+        border-radius: 5px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include respond(phone) {
+          justify-content: center;
+          align-items: center;
+        }
+
+
+        &-1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-around;
+          background-color: white;
+          width: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+
+          @include respond(phone) {
+            margin-bottom: 10px;
+          }
+
+        }
+
+        &-1 img {
+          height: 30px;
+          width: 30px;
+          object-fit: contain;
+
+          @include respond(phone) {
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        &-1 a {
+          padding-right: 20px;
+          text-decoration: none;
+          color: #1A78E6;
+        }
+
+        &-1 span {
+          padding-left: 10px;
+          color: #F71313;
+        }
+
+        &-2 {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-around;
+          background-color: white;
+          width: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+        }
+
+        &-2 img {
+          height: 30px;
+          width: 30px;
+          object-fit: contain;
+        }
+
+        &-2 a {
+          padding-right: 32px;
+          text-decoration: none;
+          color: #1A78E6;
+        }
+
+        &-2 span {
+          padding-left: 2px;
+          color: #F71313;
+        }
+
+      }
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
       background-color: white;
       padding: 10px;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       margin: 10px 0;
 
-      & input{
+      @include respond(phone) {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+
+      & input {
         padding: 10px 10px;
         margin: 10px 0;
         border: none;
         border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
 
-
-        &:focus{
+        &:focus {
           outline: none;
         }
+
+
+
       }
-    }
 
-    &-form1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      width: 240px;
-      border-radius: 10px;
-
-
-      & input {
+      & button {
+        width: 100%;
+        padding: 10px 20px;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 10px;
+        color: white;
+        font-size: larger;
+        background-color: blueviolet;
         border: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 8px 10px;
-        width: 80%;
+        margin: 10px auto;
+
       }
     }
 
-    &-form2 {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      align-items: center;
 
-      input {
-        border: none;
-      }
-    }
 
-    &-form3 {
-      display: flex;
-      flex-direction: column;
-      padding: 10px 20px;
+    .text {
+      justify-content: center;
+      padding: 5px 20px;
       align-items: center;
       font-weight: bold;
-      border-radius: 10px;
-      width: 240px;
+      display: flex;
+      color: blueviolet;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      width: 100%;
 
-      background-color: blueviolet;
-      input {
-        border: none;
+      @include respond(phone) {
+        margin-top: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       }
+    }
 
-      color: white;
+    .text1 {
+      justify-content: center;
+      padding: 20px;
+      align-items: center;
+      font-weight: bold;
+      display: flex;
+      color: black;
+      width: 80;
+
+      & a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #1D5BD4;
+      }
     }
   }
-}
-
-.text {
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  font-weight: bold;
-  display: flex;
-  color: blueviolet;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  width: 100%;
-}
-
-.text1 {
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  font-weight: bold;
-  display: flex;
-  color: black;
 }

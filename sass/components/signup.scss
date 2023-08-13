@@ -1,96 +1,177 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-
-.login_main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100;
-  width: 100;
-
-  &-box {
+.sign{
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-secondary;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+.sign-up {
+  height: 80vh;
+  width: 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  @include respond(phone){
+    width: 90%;
+  }
+  &_box {
     width: 100vw;
     height: 100vh;
-    background-color: #a18cd1;
-    width: 40%;
-    border-radius: 0px 500px 500px 0px;
+    width: 350px;
+    border-radius: 50%;
+    position: absolute;
+    left: -15%;
+    top: -14%;
+    @include secondary-gradient;
+    @include respond(phone){
+      display: none;
+    }
+    & img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 80%;
+      height: 90px;
+      width: 90px;
+    }
+  }
+
+  &-body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    
-  }
-  &_second {
-    margin-left: 100px;
-    padding-top: 5rem;
-    padding-left: 6rem;
+    justify-content: center;
+    @include respond(phone){
+     margin: 20px auto;
+    }
     &-head {
-      
       font-family: "Montserrat", sans-serif;
-      align-items: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      @include respond(phone){
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 0%;
+        padding: 0%;
+      }
     }
-    h1{
-
+    h1 {
       font-weight: bold;
     }
 
-    & .inputs{
+    &-inputs {
+      
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-      margin: 10px;
-    }
-    &-form {
-      margin: 10px;
-      width: 240px;
-      height: 40px;
-      background-color:none;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 440px;
+      background-color: white;
       padding: 10px;
-      text-align: center;
-      color: red;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-      margin: 10px;
-     
-    
-    }
-   
-    &-form2 {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      align-items: center;
-
-      input {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin-top: 20px;
+      @include respond(phone){
+        width: 320px;
+        box-shadow: none;
         border: none;
+        margin-bottom: 0%;
+        
+      }
+
+      & input {
+        padding: 10px 10px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & button{
+        width: 300px;
+        padding: 10px 20px;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 10px;
+        color: white;
+        font-size: larger;
+        background-color: blueviolet;
+        border: none;
+        margin: 10px auto;
+        @include respond(phone){
+          width: 233px;
+        }
       }
     }
-    &-form3 {
-      display: flex;
-      flex-direction: column;
+
+    
+
+
+
+    &-text {
+      margin-top: 15px;
       padding: 20px;
       align-items: center;
       font-weight: bold;
-      input {
-        border: none;
+      display: flex;
+      justify-content: center;
+      color: blueviolet;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      width: 100%;
+      @include respond(phone){
+        font-size: 13px;
+        text-align: center;
+        margin:2px auto 0 auto;
+        padding: 0%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 8px;
       }
-      background-color: blueviolet;
-      color: white;
+      
+    }
+    &-text span{
+      margin:0 6px;
+      color: #0A66C2;
+    }
+  
+    &-text1 {
+      margin-bottom: 50px;
+      justify-content: center;
+      padding: 20px;
+      align-items: center;
+      font-weight: bold;
+      display: flex;
+      color: black;
+      width: 80;
+      @include respond(phone){
+        font-size: 15px;
+        padding: 0%;
+        margin-top: 10px;
+        width: 400px;
+      }
+  
+      & a{
+        margin-left: 12px;
+        text-decoration: none;
+        color: #1D5BD4;
+        
+      }
     }
   }
 }
-.text {
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  font-weight: bold;
-  display: flex;
- 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  width: 100%;
-  color: black;
-  
-}
-.text1 {
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  font-weight: bold;
-  display: flex;
-  color: black;
 }
