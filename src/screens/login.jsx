@@ -23,7 +23,7 @@ export default function LoginScreen() {
         </div>
         <div className="login_main_second-form">
           <img
-            src={require("../assets/facebook.png")}
+            // src={require("../assets/facebook.png")}
             alt=""
             srcset=""
             className="login_main_second-form-gl"
