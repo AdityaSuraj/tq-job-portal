@@ -502,7 +502,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 10px; }
     @media (max-width: 600px) {
       .login .login_main {
@@ -548,7 +547,6 @@ body {
       .login .login_main_second h1 {
         font-weight: bold; }
       .login .login_main_second .inputs {
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
         margin: 20px; }
         @media (max-width: 600px) {
           .login .login_main_second .inputs {
@@ -576,7 +574,6 @@ body {
           justify-content: space-around;
           background-color: white;
           width: 100%;
-          height: 40%;
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 5px; }
           @media (max-width: 600px) {
@@ -585,7 +582,7 @@ body {
         .login .login_main_second-link-1 img {
           height: 30px;
           width: 30px;
-          padding-left: 2px; }
+          object-fit: contain; }
           @media (max-width: 600px) {
             .login .login_main_second-link-1 img {
               justify-content: center;
@@ -598,19 +595,19 @@ body {
           padding-left: 10px;
           color: #F71313; }
         .login .login_main_second-link-2 {
+          margin-top: 10px;
           display: flex;
           justify-content: center;
           align-items: center;
           justify-content: space-around;
           background-color: white;
           width: 100%;
-          height: 40%;
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 5px; }
         .login .login_main_second-link-2 img {
           height: 30px;
           width: 30px;
-          padding-left: 0px; }
+          object-fit: contain; }
         .login .login_main_second-link-2 a {
           padding-right: 32px;
           text-decoration: none;
@@ -622,7 +619,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 350px;
+      width: 50%;
       background-color: white;
       padding: 10px;
       border: 1px solid rgba(0, 0, 0, 0.2);
@@ -653,7 +650,7 @@ body {
         margin: 10px auto; }
     .login .login_main .text {
       justify-content: center;
-      padding: 20px;
+      padding: 5px 20px;
       align-items: center;
       font-weight: bold;
       display: flex;
