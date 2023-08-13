@@ -11,6 +11,7 @@ import HomeScreen from './screens/home';
 import LoginScreen from './screens/login';
 import SignupScreen from './screens/signup';
 import contactus from './screens/contactus';
+import Privacy from './screens/privacy';
 import SearchResultScreen from './screens/searchResult';
 import Aboutus from './screens/aboutus';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" Component={HomeScreen}/>
         <Route path="/aboutus" Component={Aboutus}/>
         <Route path="/contactus" Component={contactus}/>
+        <Route path="/privacy" Component={Privacy}/>
         <Route path="/search-result/:city/:role" Component={SearchResultScreen}/>
 
       </Routes>

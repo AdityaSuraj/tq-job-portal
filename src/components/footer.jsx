@@ -14,8 +14,8 @@ export default function Footer() {
                 <div className="footer__col">
                     <span>Important Links</span>
                     <div className="nav">
-                        <a href="http://" target="_blank" >Search Job</a>
-                        <a href="http://" target="_blank" >Blogs</a>
+                        <a href="#" target="_blank" >Search Job</a>
+                        <a href="#" target="_blank" >Blogs</a>
                         <a href="/aboutus" target="_blank" >About us</a>
                         <a href="/contactus" target="_blank" >Contact us</a>
 
@@ -24,9 +24,9 @@ export default function Footer() {
                 <div className="footer__col">
                     <span>Others</span>
                     <div className="nav">
-                        <a href="http://" target="_blank" >Privacy Policy</a>
-                        <a href="http://" target="_blank" >Terms & Conditions</a>
-                        <a href="http://" target="_blank" >Refund Policy</a>
+                        <Link to="/privacy" target="_blank" >Privacy Policy</Link>
+                        <a href="#" target="_blank" >Terms & Conditions</a>
+                        <a href="#" target="_blank" >Refund Policy</a>
                     </div>
                 </div>
                 <div className="footer__col">
