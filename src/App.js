@@ -11,6 +11,7 @@ import HomeScreen from './screens/home';
 import LoginScreen from './screens/login';
 import SignupScreen from './screens/signup';
 import contactus from './screens/contactus';
+import Privacy from './screens/privacy';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" Component={LoginScreen}/>
         <Route path="/" Component={HomeScreen}/>
         <Route path="/contactus" Component={contactus}/>
+        <Route path="/privacy" Component={Privacy}/>
       </Routes>
     </Router >
   );
