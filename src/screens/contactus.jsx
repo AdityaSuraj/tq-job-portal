@@ -1,8 +1,40 @@
 
-import React from "react";
-import footer from "../components/footer";
+import  React,{useState} from "react";
+import axios from "axios";
 
 export default function contactus() {
+const[formData, setFormData]= useState({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prevFormData) => ({
+    ...prevFormData,
+    [name]: value,
+  }));
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  axios
+    .post("/api/contact", formData)
+    .then((response) => {
+      console.log("Form submitted successfully!", response.data);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    })
+    .catch((error) => {
+      console.error("Error submitting form:", error);
+    });
+};
+
+
   return (
     <div className="contactus">
       <div className="contactus__c">
@@ -13,16 +45,26 @@ export default function contactus() {
         </div>
         <div className="contactus__c-middle">
           <h1>Contact Us</h1>
-          <form className="inputs" action="" method="">
+          <form className="inputs" action="" method="" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Name"
               className="contactus_main_second-form1-1"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required={true}
+            
+            
             />
             <input
               type="text"
               placeholder="Email-id"
               className="contactus_main_second-form1-1"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required={true}
             />
 
             <label htmlFor="message">Message</label>
@@ -31,9 +73,13 @@ export default function contactus() {
               type="text"
               placeholder="Message"
               className="contactus_main_second-form1-1"
-            ></textarea>
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required={true}
+           ></textarea>
 
-            <button type="submit">Submit</button>
+            <button  type="submit">Submit</button>
           </form>
         </div>
         <div className="contactus__c-right">
@@ -41,53 +87,7 @@ export default function contactus() {
         </div>
 
       </div>
-      {/* <section className="contactus_main">
-        <div className="contactus_main-box">
-          <img src={require("../assets/logo.png")} alt="" srcset="" />
-        </div>
-
-        <div className="contactus_main_second">
-          <div className="contactus_main_second-head">
-            <h1>Contact Us</h1>
-          </div>
-
-          <form className="inputs" action="" method="">
-
-            <input
-              type="text"
-              placeholder="Name"
-              className="contactus_main_second-form1-1"
-            />
-
-
-            <input
-              type="text"
-              placeholder="Email-id"
-              className="contactus_main_second-form1-1"
-            />
-
-
-            <input
-              type="text"
-              placeholder="Message"
-              className="contactus_main_second-form1-1"
-            />
-
-          </form>
-
-
-          <button className="contactus_main_second-form3" >Submit</button>
-        </div>
-
-        <div className="contactus_main-pic">
-          <img
-            classname=""
-            src={require("../assets/CallCenter.jpg")}
-            alt="callcenter"
-          />
-        </div>
-      </section> */}
-
+      
     </div>
   );
 }
